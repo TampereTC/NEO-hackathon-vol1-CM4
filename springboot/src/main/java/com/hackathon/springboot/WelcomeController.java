@@ -17,4 +17,23 @@ public class WelcomeController {
 	public String welcome() {
 		return service.retrieveWelcomeMessage();
 	}
+		@RequestMapping(value = "/welcome/", method = RequestMethod.POST)
+	public String welcome() {
+		return service.retrieveWelcomeMessage();
+	}
+
+	@RequestMapping(value = "/create/", method = RequestMethod.PUT)
+	public String create() {
+		return service.retrieveWelcomeMessage();
+	}
+
+	@RequestMapping(value = "/update/", method = RequestMethod.POST)
+	public String update() {
+		return service.retrieveUpdateMessage();
+	}
+	
+	@RequestMapping(value = "/remove/", method = RequestMethod.DELETE)	
+	public String remove() {
+		return service.retrieveRemoveMessage();
+	}
 }
